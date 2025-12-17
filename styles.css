@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #130242;
+  font-family: Geom;
+}
+#container {
+  margin: 25px auto;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 5px 5px 20px #0b0128;
+}
+
+.cells {
+  background: rgba(228, 228, 228, 0.738);
+  border: 1px solid rgba(87, 80, 80, 0.043);
+}
+
+input {
+  height: 1.2rem;
+  width: 100%;
+  appearance: none;
+  outline: none;
+  background-color: rgba(228, 228, 228, 0.738);
+}
+
+input::-webkit-slider-thumb {
+  appearance: none;
+  background-color: #26006f;
+  height: 1.2rem;
+  width: 1.2rem;
+  cursor: pointer;
+}
+
+label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #bbb3d3;
+  margin-right: 0.9rem;
+}
+
+ul{
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+
+}
+
+li{
+  display: inline-block;
+}
+.reset-button {
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #bbb3d3;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  background-color: #1d006b;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 1rem;
+
+}
+
+.reset-button::after {
+  content: "";
+  --angle: 0deg;
+  background: conic-gradient(
+    from var(--angle),
+    #00d5bf,
+    #f526fa,
+    #0c6bf0,
+    #26006f,
+    #26006f,
+    #00d5bf
+  );
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border-radius: 8px;
+  display: none;
+}
+
+.reset-button:hover::after {
+  animation: glowing-border 2.5s linear infinite;
+  display: inline;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes glowing-border {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+

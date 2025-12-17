@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geom:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+    <title>Etch-a-Sketch</title>
+  </head>
+  <body>
+      <ul>
+          <li>
+              <label for="square-per-side">Resolution: 16 x 16</label>
+              <input
+              type="range"
+              name="square-per-side"
+              id="square-per-side"
+              min="2"
+              max="100"
+              value="16"
+              />
+            </li>
+        </ul>
+      <div id="container"></div>
+        <ul>
+          <li><a class="reset-button" id="reset-button">Reset</a></li>
+          <li><a class="reset-button" id="pencil-btn">Pencil</a></li>
+          <li><a class="reset-button" id="shade-btn">Shade</a></li>
+          <li><a class="reset-button" id="rainbow-btn">Rainbow colors</a></li>
+        </ul>
+        
+    </body>
+    </html>
+    
